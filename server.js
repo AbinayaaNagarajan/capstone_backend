@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3000
 
 mongoose.connect('mongodb+srv://abinayaanagarajan:v35nnj1mqR9hpV0Q@cluster0.yx8fcpp.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser : true, useUnifiedTopology: true});
 
-//const cors = require("cors")
+const cors = require("cors")
 
 // Configuring the server to accept and parse JSON data.
 app.use(express.json())
@@ -21,7 +21,7 @@ app.use(express.json())
 //Middleware
 
 app.use(bodyParser.json());
-
+app.use(cors());
 //Routes
 
 const studentRoutes = require ('./routes/studentRoutes');
@@ -36,7 +36,7 @@ app.use('/signup', signupRoutes);
 const contactRoutes = require('./routes/contactRoutes');
 app.use('/contact', contactRoutes);
 
-//app.use(cors())
+
 
 // Calling the listen function telling the server to listen on port 3000
 app.listen(PORT, () => {

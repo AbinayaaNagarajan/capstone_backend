@@ -6,6 +6,7 @@ exports.saveAttendance = async (req,res) => {
     const {name, date, month, status} = req.body;
 
     try{
+      console.log(JSON.stringify(req.headers))
         const attendance = new Attendance ({
             name,
             date,
@@ -13,6 +14,7 @@ exports.saveAttendance = async (req,res) => {
             status
         });
         await attendance.save();
+        res.json(attendance);
         } catch (error){
             console.log(error);
             res.status(500).json({error: ' Internal server error'});
