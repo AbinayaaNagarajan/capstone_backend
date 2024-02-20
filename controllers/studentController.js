@@ -26,7 +26,8 @@ const {name, grade , batch } = req.body;
     });
 
    await student.save();
-    res.json ({success: true, message : 'Student added Successfully'});
+   //console.log(student);
+    res.json ({success: true, message : 'Student added Successfully', student: student});
 
   } catch (err) {
     console.log(err);
