@@ -5,11 +5,11 @@
 - MongoDB server running
 - NPM  installed
 
-Install dependencies:
+## Install dependencies:
 npm install
 npm run dev
 
-Usage
+## Usage
 Access the API at http://localhost:3000/.
 API Endpoints
 GET /api/students/getAllStudent/: Get all student details.
@@ -20,5 +20,8 @@ POST /api/attendance/saveAttendance: Save attendance data.
 POST /api/attendance/editAttendance: Edit attendance data.
 For detailed information on each endpoint, refer to the respective controller files.
 
-Authentication
+## Authentication
 Some routes require authentication. Include the auth header with the value mypassword for authentication.
+
+## Live Link
+https://legendary-licorice-7d06ec.netlify.app/
